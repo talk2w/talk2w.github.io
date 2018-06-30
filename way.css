@@ -42,9 +42,10 @@ body{
 	top: 60%;
 	transform: translate(-80%, -60%);
 	font-family: 'Varela Round', sans-serif;
-	font-size: 4em;
+	font-size: 1.6em;
 	color: #FFFFFF;
 	text-align: right;
+	min-width: 260px;
 }
 h1.count {
 	position: fixed;
@@ -52,7 +53,7 @@ h1.count {
 	top: 10%;
 	transform: translate(-15%, -10%);
 	font-family: 'Varela Round', sans-serif;
-	font-size: 5.2em;
+	font-size: 3.2em;
 	color: #FFFFFF;
 	text-align: right;
 }
@@ -62,7 +63,7 @@ a.mail {
 	top: 30%;
 	transform: translate(-20%, -30%);
 	font-family: 'Varela Round', sans-serif;
-	font-size: 2.5em;
+	font-size: 1.2em;
 	color: #FFFFFF;
 	text-align: right;
 	text-decoration: none;
@@ -75,7 +76,7 @@ a.mail {
 	position: fixed;
 	left: -10%;
 	top:-10%;
-	transform: translate(10%, 10%) scale(2);
+	transform: translate(10%, 10%) scale(1.8);
 	background-color: #00a8ff;
 	border-radius: 50%;
 	/*opacity: 0;*/
@@ -85,32 +86,44 @@ a.mail {
 }
 .points-change {
 	opacity: 1;
-	transform: scale(5);
+	transform: scale(1.8);
 }
 .points-change1 {
 	opacity: 1;
-	transform: scale(6);
+	transform: scale(1.2);
 	background-color: #6c5ce7;
 }
 .points-change2 {
 	opacity: 1;
-	transform: scale(5.5);
+	transform: scale(1.5);
 	background-color: #00b894;
 }
 .points-change3 {
 	opacity: 1;
-	transform: scale(20);
+	transform: scale(20) !important;
 	background-color: #ff6b81;
 }
 
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1096px) {
 .words {
-	font-size: 2em;
+	font-size: 2.5em;
 }
 h1.count {
-	font-size: 3.2em;
+	font-size: 5.2em;
+}
+a.mail {
+	font-size: 2.5em;
+}
+.points-change {
+	transform: scale(5);
+}
+.points-change1 {
+	transform: scale(6);
+}
+.points-change2 {
+	transform: scale(5.5);
 }
 
 }
