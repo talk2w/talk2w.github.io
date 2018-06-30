@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Waypoints</title>
+	<link rel="stylesheet" type="text/css" href="way.css">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+<body>	
+		<div class="points"></div>
+		
+		<div class="vp">
+			<h1 class="words pt">Hi,<br>I am Arpan</h1>
+		</div>
+		<div class="vp">
+			<h1 class="words pt1">Varela Round is based on the well known font Varela. </h1>
+		</div>
+		<div class="vp">
+			<h1 class="words pt2">jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. </h1>
+		</div>
+		<div class="vp">
+			<h1 class="words pt3"> </h1>
+		</div>
+		<h1 class="count">1.</h1>
+		<a class="mail" href="mailto:talk2william@protonmail.com">talk2william@protonmail.com</a>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script>
+		var $points = $('div.points');
+		var $pt = $('h1.pt');
+		var $pt1 = $('h1.pt1');
+		var $pt2 = $('h1.pt2');
+		var $pt3 = $('h1.pt3');
+		var $ct = $('h1.count');
+		var $ml = $('a.mail');
+
+		$pt.waypoint(function(direction) {
+			// body...
+			if(direction == 'down'){
+				console.log('add Waypoints!!');
+				$points.addClass('points-change');
+				$ct.text('1.');
+			} else {
+				console.log('remove Waypoints!!');
+				$points.removeClass('points-change');
+			}
+
+		}, {offset: '54%'});
+
+		$pt1.waypoint(function(direction) {
+			// body...
+			if(direction == 'down'){
+				console.log('add Waypoints!!');
+				$points.addClass('points-change1');
+				$ct.text('2.');
+			} else {
+				console.log('remove Waypoints!!');
+				$points.removeClass('points-change1');
+				$ct.text('1.');
+			}
+
+		}, {offset: '54%'});
+
+		$pt2.waypoint(function(direction) {
+			// body...
+			if(direction == 'down'){
+				console.log('add Waypoints!!');
+				$points.addClass('points-change2');
+				$ct.text('3.');
+			} else {
+				console.log('remove Waypoints!!');
+				$points.removeClass('points-change2');
+				$ct.text('2.');
+			}
+
+		}, {offset: '54%'});
+		$pt3.waypoint(function(direction) {
+			// body...
+			if(direction == 'down'){
+				console.log('add Waypoints!!');
+				$points.addClass('points-change3');
+				$ct.text('Contact Me');
+				$ml.css({'opacity':'0.8'});
+			} else {
+				console.log('remove Waypoints!!');
+				$points.removeClass('points-change3');
+				$ct.text('3.');
+				$ml.css({'opacity':'0'});
+			}
+
+		}, {offset: '80%'});
+	</script>
+</body>
+</html>
